@@ -14,7 +14,7 @@ public:
     static const int default_attackForce = 20;
 
     Hero(int health = default_health, int aForce = default_attackForce)
-        :Unit(health, aForce), scores(0)
+            :Unit(health, aForce), scores(0)
     {}
     void attack (Dragon &drago)
     {
@@ -33,6 +33,13 @@ public:
             std::cout << "Hero suffers..." << std::endl;
         }
     }
+    int getScores(){
+        return scores;
+    }
+    void addScores(int scores){
+        scores+=1;
+    }
+
 };
 
 #endif // HERO_H_INCLUDED
